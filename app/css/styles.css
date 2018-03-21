@@ -12,7 +12,6 @@ body{
         margin:0;
 }
 
-
 .grid{
     max-width: 960px;
     margin: 0 auto;
@@ -20,7 +19,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 
 .card{
     position: relative;
@@ -52,6 +50,7 @@ body{
 }
 
 .back{
+    transform: rotateY(180deg);
     background-color: #F8F8F8;
     background-size: contain;
     background-repeat: no-repeat;
@@ -60,11 +59,11 @@ body{
 
 .selected{
     transform: rotateY(180deg);
-    /*border: 4px solid blue;*/
+    /*border: 4px solid blue; only dev*/
 }
 
 .match .front{
-    /*border: 4px solid red;
-    background-image: none !important;*/
+    /*border: 4px solid red;  only dev*/
+    background-image: none !important;
     background-color:white !important;
 }

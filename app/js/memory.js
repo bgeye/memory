@@ -94,18 +94,15 @@ gameGrid.forEach(function(element){
 
 cardGrid.addEventListener('click', function(event){
 
-    if(event.target && event.target.matches('div .front') && event.target !== previousTarget){
-        console.log(event.target);
+    if(event.target && event.target.parentNode.matches('div .card') && event.target.parentNode !== previousTarget){
         var clickedItem = event.target.parentNode;
         if(count < 2){
             count++;
             if(count == 1) {
-                //console.log(clickedItem.dataset.name);
                 firstGuess = clickedItem.dataset.name;
                 previousTarget = clickedItem;
                 clickedItem.classList.add('selected');
             } else {
-                //console.log(clickedItem.dataset.name);
                 secondGuess = clickedItem.dataset.name;
                 clickedItem.classList.add('selected');
             }
@@ -133,7 +130,6 @@ function resetGuess() {
     firstGuess = '';
     secondGuess = '';
     count = 0;
-
     var selected = document.querySelectorAll('.selected');
     selected.forEach(function(element) {
         element.classList.remove('selected')
